@@ -20,7 +20,7 @@ classifiers = [
     "Topic :: Utilities",
 ]
 keywords = ["core", "measures", "quality", "algebraic model"]
-requires-python = ">=3.8"
-dependencies = ["pandas==2.0.0","marshmallow==3.19.0","numpy==1.24.3"]
+requires-python = ">=3.9"
+dependencies = ["pandas>=2.2.0","marshmallow==3.21.0","numpy>=2.0"]
 [tool.mypy]
 strict = true
