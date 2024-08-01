@@ -99,7 +99,7 @@ class Checker:
 
     @staticmethod
     def check_metric_values(metric_values, metric):
-        if not isinstance(metric_values, (list, np.ndarray)):
+        if not isinstance(metric_values, (list)):
             value = metric_values
             Checker.check_metric_value(value, metric)
         else:
