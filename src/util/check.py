@@ -99,16 +99,13 @@ class Checker:
 
     @staticmethod
     def check_metric_values(metric_values, metric):
-        # Check if metric_values is a NumPy array
         if isinstance(metric_values, np.ndarray):
-            # If it's a 0-d array, convert it to a 1-d array
             if metric_values.ndim == 0:
-                metric_values = np.array([metric_values.item()])
-        
-        # Convert to list if it's not an iterable
+                metric_values = np.array([metric_values.item()])        
+
         if not isinstance(metric_values, (list, np.ndarray)):
             metric_values = [metric_values]
-        
+
         for value in metric_values:
             Checker.check_metric_value(value, metric)
 
