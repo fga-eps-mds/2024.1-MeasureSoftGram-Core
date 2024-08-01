@@ -1,7 +1,5 @@
 import math
 
-import numpy as np
-
 from util.exceptions import (
     InvalidCheckThreshold,
     InvalidMetricValue,
