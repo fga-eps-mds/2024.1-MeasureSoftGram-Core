@@ -101,7 +101,7 @@ class Checker:
     def check_metric_values(metric_values, metric):
         if isinstance(metric_values, np.ndarray):
             if metric_values.ndim == 0:
-                metric_values = np.array([metric_values.item()])  
+                metric_values = np.array([metric_values.item()])
 
         if not isinstance(metric_values, (list, np.ndarray)):
             metric_values = [metric_values]
