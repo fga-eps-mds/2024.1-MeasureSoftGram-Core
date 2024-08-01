@@ -196,6 +196,14 @@ SUCCESS_TEST_DATA = [
         0.0,
     ),
     (
+        non_complex_files_density,
+        {
+            "functions": 0.45,
+            "complexity": 0.45,
+        },
+        0.0,
+    ),
+    (
         commented_files_density,
         {
             "comment_lines_density": [
