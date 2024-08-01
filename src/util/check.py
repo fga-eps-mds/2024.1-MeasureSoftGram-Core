@@ -100,7 +100,7 @@ class Checker:
     @staticmethod
     def check_metric_values(metric_values, metric):
         if not isinstance(metric_values, (list, np.ndarray)):
-            raise InvalidMetricValue(f'"{metric}" is not a list or a np.ndarray')
+            Checker.check_metric_value(value, metric_values)
 
         # if not len(metric_values):
         #     raise InvalidMetricValue(f'"{metric}" is empty')
