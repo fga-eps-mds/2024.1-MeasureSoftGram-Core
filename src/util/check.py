@@ -101,12 +101,9 @@ class Checker:
     def check_metric_values(metric_values, metric):
         if not isinstance(metric_values, (list, np.ndarray)):
             Checker.check_metric_value(value, metric_values)
-
-        # if not len(metric_values):
-        #     raise InvalidMetricValue(f'"{metric}" is empty')
-
-        for value in metric_values:
-            Checker.check_metric_value(value, metric)
+        else:
+            for value in metric_values:
+                Checker.check_metric_value(value, metric)
 
     @staticmethod
     def check_aggregated_weighted_values(values, weights):
