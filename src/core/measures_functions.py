@@ -194,7 +194,7 @@ def get_team_throughput(data: dict[str, int]):
     total_issues = data["total_issues"]
     resolved_issues = data["resolved_issues"]
 
-    return 100 * ((resolved_issues / total_issues) if total_issues is not 0 else 0)
+    return 100 * ((resolved_issues / total_issues) if total_issues != 0 else 0)
 
 
 def get_ci_feedback_time(data: dict[str, int]):
@@ -208,4 +208,4 @@ def get_ci_feedback_time(data: dict[str, int]):
     total_builds = data["total_builds"]
     sum_ci_feedback_times = data["sum_ci_feedback_times"]
 
-    return ((sum_ci_feedback_times // total_builds) if total_builds is not 0 else 0)
+    return (sum_ci_feedback_times // total_builds) if total_builds != 0 else 0
