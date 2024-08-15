@@ -77,12 +77,12 @@ INVALID_METRICS_TEST_DATA = [
     ),
     (
         passed_tests,
-        {"tests": [10], "test_errors": "abc", "test_failures": 0.0},
+        {"tests": 10, "test_errors": "abc", "test_failures": 0.0},
         '"test_errors" has an invalid metric value',
     ),
     (
         passed_tests,
-        {"tests": [10], "test_errors": 0.0, "test_failures": "nan"},
+        {"tests": 10, "test_errors": 0.0, "test_failures": "nan"},
         '"test_failures" has an invalid metric value',
     ),
 ]
@@ -310,7 +310,7 @@ SUCCESS_TEST_DATA = [
         {
             "test_failures": 0.0,
             "test_errors": 0.0,
-            "tests": [10],
+            "tests": 10,
         },
         1.0,
     ),
@@ -319,7 +319,7 @@ SUCCESS_TEST_DATA = [
         {
             "test_failures": 0.0,
             "test_errors": 0.0,
-            "tests": [0],
+            "tests": 0,
         },
         0.0,
     ),
@@ -960,7 +960,7 @@ INVALID_THRESHOLD_TEST_DATA = [
             "data_frame": {
                 "test_failures": 0.0,
                 "test_errors": 0.0,
-                "tests": [10],
+                "tests": 10,
             },
             "min_threshold": 10,
             "max_threshold": 1,
@@ -973,7 +973,7 @@ INVALID_THRESHOLD_TEST_DATA = [
             "data_frame": {
                 "test_failures": 0.0,
                 "test_errors": 0.0,
-                "tests": [10],
+                "tests": 10,
             },
             "min_threshold": 0,
             "max_threshold": 0.99,
