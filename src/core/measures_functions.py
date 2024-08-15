@@ -129,8 +129,7 @@ def get_passed_tests(data: dict[str, float]):
     used to assess the testing status sub characteristic.
     """
 
-    # number_of_tests está retornando valores incorretos
-    number_of_tests = resolve_metric_list_parameter(data["tests"]).sum()
+    number_of_tests = data["tests"]
     number_of_test_errors = data["test_errors"]
     number_of_test_failures = data["test_failures"]
 
