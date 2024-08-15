@@ -77,12 +77,12 @@ INVALID_METRICS_TEST_DATA = [
     ),
     (
         passed_tests,
-        {"tests": [0.45], "test_errors": "abc", "test_failures": 0.0},
+        {"tests": [10], "test_errors": "abc", "test_failures": 0.0},
         '"test_errors" has an invalid metric value',
     ),
     (
         passed_tests,
-        {"tests": [0.45], "test_errors": 0.0, "test_failures": "nan"},
+        {"tests": [10], "test_errors": 0.0, "test_failures": "nan"},
         '"test_failures" has an invalid metric value',
     ),
 ]
