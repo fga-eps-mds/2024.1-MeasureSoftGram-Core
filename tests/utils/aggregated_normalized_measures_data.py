@@ -319,7 +319,7 @@ SUCCESS_TEST_DATA = [
         {
             "test_failures": 0.0,
             "test_errors": 0.0,
-            "tests": [],
+            "tests": [0],
         },
         0.0,
     ),
