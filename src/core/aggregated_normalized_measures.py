@@ -241,9 +241,8 @@ def passed_tests(data_frame, min_threshold: float = 0, max_threshold: float = 1)
     test_errors = data_frame["test_errors"]  # m7 metrics
     test_failures = data_frame["test_failures"]  # m8 metrics
 
-    Checker.check_metric_value(tests, "tests")
-
-    if tests == 0:
+    Checker.check_metric_values(tests, "tests")
+    if len(tests) == 0:
         return 0.0
     Checker.check_metric_value(test_failures, "test_failures")
     Checker.check_metric_value(test_errors, "test_errors")
