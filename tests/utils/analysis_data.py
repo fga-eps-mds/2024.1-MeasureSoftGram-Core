@@ -97,6 +97,23 @@ EXTRACTED_MEASURES_DATA = {
             ],
         },
         {
+            "key": "ci_feedback_time",
+            "metrics": [
+                {
+                    "key": "total_builds",
+                    "value": [
+                        0.0,
+                    ],
+                },
+                {
+                    "key": "sum_ci_feedback_times",
+                    "value": [
+                        0.0,
+                    ],
+                },
+            ],
+        },
+        {
             "key": "non_complex_file_density",
             "metrics": [
                 {
@@ -211,6 +228,23 @@ EXTRACTED_MEASURES_DATA = {
                 }
             ],
         },
+        {
+            "key": "team_throughput",
+            "metrics": [
+                {
+                    "key": "total_issues",
+                    "value": [
+                        0.0,
+                    ],
+                },
+                {
+                    "key": "resolved_issues",
+                    "value": [
+                        0.0,
+                    ],
+                },
+            ],
+        },
     ]
 }
 
@@ -219,9 +253,11 @@ CALCULATE_MEASURES_RESULT_DATA = {
         {"key": "passed_tests", "value": 1.0},
         {"key": "test_builds", "value": 0.9995933399758454},
         {"key": "test_coverage", "value": 0.23425},
+        {"key": "ci_feedback_time", "value": 0.0},
         {"key": "non_complex_file_density", "value": 0.8603745807930887},
         {"key": "commented_file_density", "value": 0.0935},
         {"key": "duplication_absense", "value": 0.0},
+        {"key": "team_throughput", "value": 0.0},
     ]
 }
 
