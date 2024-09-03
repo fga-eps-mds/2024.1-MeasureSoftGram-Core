@@ -17,7 +17,7 @@ from util.exceptions import MeasureKeyNotSupported
 MEASURE_TYPE = Enum("MEASURE_TYPE", ["STATIC", "RUN_TIME"])
 
 
-def convert_static_metrics_to_dict(metrics_list):
+def convert_metrics_to_dict(metrics_list):
     metrics_dict = {}
     for metric in metrics_list:
         if len(metric["value"]) == 1:
@@ -94,9 +94,7 @@ def calculate_measures(
         }
 
         if measure_type == MEASURE_TYPE.STATIC:
-            validated_params = convert_static_metrics_to_dict(
-                validated_params["metrics"]
-            )
+            validated_params = convert_metrics_to_dict(validated_params["metrics"])
 
         result = aggregated_normalized_measure(validated_params, **threshold_config)
 

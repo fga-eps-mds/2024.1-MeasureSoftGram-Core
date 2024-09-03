@@ -521,7 +521,8 @@ CALCULATE_MEASURES_ERROR_INFOS = [
                 }
             ]
         },
-        "error: Metrics in response_time are not valid.\nschema_errors: [\"'response_time': Metricas devem ter a mesma quantidade de registros\"]",
+        "error: Metrics in response_time are not valid.\nschema_errors: "
+        + "[\"'response_time': Metricas devem ter a mesma quantidade de registros\"]",
     ),
     (
         {
@@ -534,7 +535,8 @@ CALCULATE_MEASURES_ERROR_INFOS = [
                 }
             ]
         },
-        "error: Metrics in response_time are not valid.\nschema_errors: [\"'response_time': Cada comparação de metricas de runtime deve possuir duas releases\"]",
+        "error: Metrics in response_time are not valid.\nschema_errors: "
+        + "[\"'response_time': Cada comparação de metricas de runtime deve possuir duas releases\"]",
     ),
 ]
 

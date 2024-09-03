@@ -359,11 +359,14 @@ class CompareRunTimeMeasureSchema(Schema):
 
     @staticmethod
     def validate_metrics(measure):
+
+        # 3 Validação: Se há duas releases para comparação
         if len(measure["releases"]) != 2:
             raise ValidationError(
                 f"'{measure['key']}': Cada comparação de metricas de runtime deve possuir duas releases"
             )
-        # 3 Validação: Se as listas possuem o mesmo tamanho
+
+        # 4 Validação: Se as listas possuem o mesmo tamanho
         if len(measure["releases"][0]["metrics"]) != len(
             measure["releases"][0]["endpoint_calls"]
         ) or len(measure["releases"][1]["metrics"]) != len(
@@ -373,13 +376,13 @@ class CompareRunTimeMeasureSchema(Schema):
                 f"'{measure['key']}': Metricas devem ter a mesma quantidade de registros"
             )
 
-        # 4 Validação: Se as métricas são do tipo flutuante
+        # 5 Validação: Se as métricas são do tipo flutuante
         if not isinstance(measure["releases"][0]["metrics"][0], float):
             raise ValidationError(
                 f"'{measure['key']}': Metricas deveriam ser valores flutuantes"
             )
 
-        # 5 Validação: Se as chamadas aos endpoints são do tipo inteiro
+        # 6 Validação: Se as chamadas aos endpoints são do tipo inteiro
         if not isinstance(measure["releases"][0]["endpoint_calls"][0][0], int):
             raise ValidationError(
                 f"'{measure['key']}':  Chamadas a endpoints deveriam ser valores inteiros"
