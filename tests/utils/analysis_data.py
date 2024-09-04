@@ -285,7 +285,7 @@ CALCULATE_MEASURES_RESULT_DATA = {
 EXTRACTED_RUNTIME_MEASURES_DATA = {
     "measures": [
         {
-            "key": "cpu_utilizaton",
+            "key": "cpu_utilization",
             "releases": [
                 {
                     "metrics": [
@@ -472,7 +472,7 @@ EXTRACTED_RUNTIME_MEASURES_DATA = {
 
 CALCULATE_RUNTIME_MEASURES_RESULT_DATA = {
     "measures": [
-        {"key": "cpu_utilizaton", "value": 0.1111111111111111},
+        {"key": "cpu_utilization", "value": 0.1111111111111111},
         {"key": "memory_utilization", "value": 0.1111111111111111},
         {"key": "response_time", "value": 0.1111111111111111},
     ]

@@ -177,7 +177,7 @@ AGGREGATED_NORMALIZED_MEASURES_MAPPING = {
         "aggregated_normalized_measure": run_time_measure,
         "schema": schemas.CompareRunTimeMeasureSchema,
     },
-    "cpu_utilizaton": {
+    "cpu_utilization": {
         "aggregated_normalized_measure": run_time_measure,
         "schema": schemas.CompareRunTimeMeasureSchema,
     },
