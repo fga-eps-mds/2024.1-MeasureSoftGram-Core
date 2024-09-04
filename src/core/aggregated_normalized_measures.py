@@ -399,8 +399,8 @@ def run_time_measure(data_frame):
         release_1_calls_on_release_2, columns=["metrics"]
     )
 
-    violation_rate = runTimeDataOperations.calculate_violation_rate(
-        release_1_metrics, release_2_metrics_normalized
+    cliff_delta = runTimeDataOperations.calculate_cliff_delta(
+        release_1_metrics["metrics"], release_2_metrics_normalized["metrics"]
     )
 
-    return violation_rate
+    return cliff_delta

@@ -337,7 +337,7 @@ class RunTimeMeasureSchema(Schema):
 class CompareRunTimeMeasureSchema(Schema):
     """
     {
-        "key": "cpu_utilizaton",
+        "key": "cpu_utilization",
         "releases": [
             {
                 "metrics": [10.0, 9.0],
@@ -394,7 +394,7 @@ class CalculateRuntimeMeasureSchema(Schema):
     {
     "measures": [
             {
-                "key": "cpu_utilizaton",
+                "key": "cpu_utilization",
                 "releases": [
                     {
                         "metrics": [10.0, 9.0],
