@@ -355,7 +355,11 @@ def ci_feedback_time(
     return aggregated_and_normalized_measure
 
 
-def run_time_measure(data_frame):
+def run_time_measure(
+    data_frame,
+    min_threshold: float = 0,
+    max_threshold: float = 0.33,
+):
     """
     Calculates any run time measure.
 
@@ -403,4 +407,15 @@ def run_time_measure(data_frame):
         release_1_metrics["metrics"], release_2_metrics_normalized["metrics"]
     )
 
-    return cliff_delta
+    interpretation_function_value = transformations.interpretation_function(
+        x=cliff_delta,
+        min_threshold=min_threshold,
+        max_threshold=max_threshold,
+        gain_interpretation=-1,
+    )
+
+    aggregated_and_normalized_measure = transformations.calculate_measure(
+        interpretation_function_value
+    )
+
+    return aggregated_and_normalized_measure
