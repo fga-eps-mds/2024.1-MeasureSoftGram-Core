@@ -49,8 +49,8 @@ def test_calculate_runtime_measures_success():
     measures_expected = CALCULATE_RUNTIME_MEASURES_RESULT_DATA.get("measures")
     for measure_result, measure_expected in zip(measures_result, measures_expected):
         assert measure_result.get("key") == measure_expected.get("key")
-        assert pytest.approx(measure_result.get("value")) == measure_expected.get(
-            "value"
+        assert measure_result.get("value") == pytest.approx(
+            measure_expected.get("value")
         )
 
 
